@@ -113,7 +113,8 @@
         */
   
         const firstUlDisappear = function () {
-          //
+          let firstListNode = document.querySelector("#firstList");
+          document.getElementsByTagName("div")[1].removeChild(firstListNode);
         };
   
         /* EXERCISE 8
@@ -121,7 +122,10 @@
         */
   
         const paintItGreen = function () {
-          //
+          let ulNode = document.querySelectorAll("ul");
+          for (let i = 0; i < ulNode.length; i++) {
+            ulNode[i].style.color = "green";
+          }
         };
   
         /* EXERCISE 9
