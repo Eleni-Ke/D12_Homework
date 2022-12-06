@@ -102,7 +102,10 @@
         */
   
         const addParagraph = function (content) {
-          //
+          let newParagraph = document.createElement("p");
+          newParagraph.innerText = content;
+
+          document.getElementsByTagName("div")[0].appendChild(newParagraph);
         };
   
         /* EXERCISE 7
