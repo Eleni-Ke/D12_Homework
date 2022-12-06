@@ -91,7 +91,10 @@
         */
   
         const addToTheSecond = function (content) {
-          //
+          let newItemNode = document.createElement('li');
+          newItemNode.innerText = content;
+
+          document.getElementById("secondList").appendChild(newItemNode);
         };
   
         /* EXERCISE 6
