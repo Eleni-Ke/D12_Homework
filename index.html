@@ -80,7 +80,10 @@
         */
   
         const changeUrls = function () {
-          //
+          let aNode = document.getElementsByTagName("a");
+          for (let i = 0; i < aNode.length; i++) {
+            aNode[i].href = "https://www.google.com";
+          }
         };
   
         /* EXERCISE 5
