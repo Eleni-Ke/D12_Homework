@@ -73,7 +73,7 @@
         const changePcontent = function () {
           let psInDivs = document.querySelectorAll("div p");
           for (let i = 0; i < psInDivs.length; i++) {
-            psInDivs[i].style.color = "turquoise";
+            psInDivs[i].innerText = "hello";
           }
         };
   
@@ -136,13 +136,15 @@
   
        //document.getElementsByClassName("myHeading")[0].addEventListener("click", makeItClickable);
         const makeItClickable = function () {
-          let randomBlue = Math.floor(Math.random()*(255 + 1));
-          let randomGreen = Math.floor(Math.random()*(255 + 1));
-          let randomRed = Math.floor(Math.random()*(255 + 1));
-          let randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
-
-          let headingNolde = document.querySelector(".myHeading");
-          headingNolde.style.color = randomColor;
+          let header = document.getElementsByTagName("h1")[0];
+          
+          header.addEventListener("click", function(event){
+            let randomBlue = Math.floor(Math.random()*(255 + 1));
+            let randomGreen = Math.floor(Math.random()*(255 + 1));
+            let randomRed = Math.floor(Math.random()*(255 + 1));
+            let randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+            event.target.style.color = randomColor;
+          })
         };
         
 
@@ -150,9 +152,10 @@
          Change the footer text with something else when the user clicks on it.
         */
   
+        //document.getElementsByClassName("body div")[2].addEventListener("click", changeFooterText);
         const changeFooterText = function () {
           let footerNode = document.getElementsByTagName("body div")[2];
-          console.log(footerNode);
+          footerNode.innerText = "Something else"
         };
   
         /* EXERCISE 11
