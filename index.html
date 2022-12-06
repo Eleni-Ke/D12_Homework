@@ -56,22 +56,23 @@
          Write a function for changing the title of the document in something else.
         */
   
-        const changeTitle = function (newTitle) { document.querySelector("h1").innerText = newTitle; }
+        const changeTitle = function (newTitle) { document.querySelector("h1").innerText = newTitle; };
   
         /* EXERCISE 2
          Write a function for changing the class of the title of the page in "myHeading".
         */
   
-        const addClassToTitle = function () {
-          //
-        };
+        const addClassToTitle = function () { document.getElementsByTagName("h1")[0].classList.add("myHeading"); };
   
         /* EXERCISE 3
          Write a function for changing the text of only the p which are children of a div.
         */
   
         const changePcontent = function () {
-          //
+          let psInDivs = document.querySelectorAll("div p");
+          for (let i = 0; i < psInDivs.length; i++) {
+            psInDivs[i].style.color = "turquoise";
+          }
         };
   
         /* EXERCISE 4
