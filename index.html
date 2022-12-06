@@ -63,7 +63,9 @@
         */
   
         const addClassToTitle = function () { document.getElementsByTagName("h1")[0].classList.add("myHeading"); };
-  
+        
+        window.addEventListener("load", addClassToTitle);
+
         /* EXERCISE 3
          Write a function for changing the text of only the p which are children of a div.
         */
@@ -132,10 +134,18 @@
          Make the heading of the page change color every time the user clicks on it.
         */
   
+       document.getElementsByClassName("myHeading")[0].addEventListener("click", makeItClickable);
         const makeItClickable = function () {
-          //
+          let randomBlue = Math.floor(Math.random()*(255 + 1));
+          let randomGreen = Math.floor(Math.random()*(255 + 1));
+          let randomRed = Math.floor(Math.random()*(255 + 1));
+          let randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+
+          let headingNolde = document.querySelector(".myHeading");
+          headingNolde.style.color = randomColor;
         };
-  
+        
+
         /* EXERCISE 10
          Change the footer text with something else when the user clicks on it.
         */
@@ -156,7 +166,6 @@
         */
   
         window.onload = function () {
-          //
         };
   
         /* EXERCISE 13
